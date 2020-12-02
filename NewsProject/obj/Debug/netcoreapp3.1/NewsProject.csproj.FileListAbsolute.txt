@@ -8,7 +8,6 @@ C:\Users\kerim\Documents\GitHub\NewsProject\NewsProject\bin\Debug\netcoreapp3.1\
 C:\Users\kerim\Documents\GitHub\NewsProject\NewsProject\bin\Debug\netcoreapp3.1\NewsProject.pdb
 C:\Users\kerim\Documents\GitHub\NewsProject\NewsProject\bin\Debug\netcoreapp3.1\NewsProject.Views.dll
 C:\Users\kerim\Documents\GitHub\NewsProject\NewsProject\bin\Debug\netcoreapp3.1\NewsProject.Views.pdb
-C:\Users\kerim\Documents\GitHub\NewsProject\NewsProject\obj\Debug\netcoreapp3.1\NewsProject.csprojAssemblyReference.cache
 C:\Users\kerim\Documents\GitHub\NewsProject\NewsProject\obj\Debug\netcoreapp3.1\NewsProject.AssemblyInfoInputs.cache
 C:\Users\kerim\Documents\GitHub\NewsProject\NewsProject\obj\Debug\netcoreapp3.1\NewsProject.AssemblyInfo.cs
 C:\Users\kerim\Documents\GitHub\NewsProject\NewsProject\obj\Debug\netcoreapp3.1\NewsProject.csproj.CoreCompileInputs.cache

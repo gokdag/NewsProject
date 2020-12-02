@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
+using NewsProject.data.Models;
 using NewsProject.Models;
 using System;
 using System.Collections.Generic;
@@ -12,6 +13,7 @@ namespace NewsProject.Controllers
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
+        UnitOfWork unitOfWork = new UnitOfWork(new DatabaseContext());
 
         public HomeController(ILogger<HomeController> logger)
         {
@@ -20,7 +22,11 @@ namespace NewsProject.Controllers
 
         public IActionResult Index()
         {
-            return View();
+            
+            unitOfWork.ReportRepository.GetAll();
+            unitOfWork.Complete();
+            return View(unitOfWork.ReportRepository);
+
         }
 
         public IActionResult Privacy()
