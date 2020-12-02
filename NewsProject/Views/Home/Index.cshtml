@@ -2,7 +2,7 @@
     ViewData["Title"] = "Home Page";
 }
 @using NewsProject.data.Models;
-@model  NewsProject.data.concrete.Repository<Report>; 
+@model  NewsProject.data.concrete.ReportRepository; 
 
 <section id="slider">
 
@@ -53,25 +53,27 @@
         <div class="container">
             <div style="padding: 2rem;" class="row">
                 <div class="col-8">
+                    @foreach (var data in Model.GetAllWithCategory())
+                    {
                     <div class="card">
                         <img class="img-fluid" src="#" alt="">
                         <div style="top:-15px !important;" class="card-img-overlay">
-                            <span class="badge badge-pill badge-danger">Ekonomi</span>
+                            <span class="badge badge-pill badge-danger">@data.Category.CategoryName</span>
                         </div>
                         <div class="card-body">
                             <div class="news-title">
-                                <h2 class=" title-small text-dark"><a href="#">Ekonomi Hakkında Title Olacak </a></h2>
+                                <h2 class=" title-small text-dark"><a href="#">@data.Title </a></h2>
                             </div>
                             <div class="news-block">
                                 <p>
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Id quaerat dolorum doloremque hic
-                                    minima exercitationem. Sed voluptatem, unde quibusdam veniam, nihil ducimus dolorem
-                                    voluptatibus quos, quidem architecto delectus itaque necessitatibus quisquam rem!
+                                   @data.Content
                                 </p>
                             </div>
-                            <p class="card-text"><small class="text-time"><em>Datetim("dd MMM yyyy")</em></small></p>
+                            <p class="card-text"><small class="text-time"><em>@data.DateTime</em></small></p>
                         </div>
                     </div>
+                    
+                    }
                 </div>
                 <div class="col-4">
                     <div class="card">

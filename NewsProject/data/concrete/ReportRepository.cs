@@ -1,4 +1,5 @@
-﻿using NewsProject.data.Abstract;
+﻿using Microsoft.EntityFrameworkCore;
+using NewsProject.data.Abstract;
 using NewsProject.data.Models;
 using System;
 using System.Collections.Generic;
@@ -19,10 +20,15 @@ namespace NewsProject.data.concrete
         {
             return _context.Reports.Find(id);
         }
+        public IEnumerable<Report> GetAllWithCategory()
+        {
+            return _context.Reports.Include(x=>x.Category).ToList();
+        }
 
         public IEnumerable<Report> GetTopReports(int count)
         {
             return _context.Reports.Take(count);
         }
+
     }
 }

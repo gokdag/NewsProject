@@ -23,7 +23,7 @@ namespace NewsProject.data.concrete
             //return _dbSet.ToList();
             return _dbSet.ToList();
         }
-
+       
         public Tentity GetById(int id)
         {
             return _dbSet.Find(id);
