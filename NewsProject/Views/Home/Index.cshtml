@@ -2,83 +2,250 @@
     ViewData["Title"] = "Home Page";
 }
 
+<section id="slider">
+
+    <div class="slideshow-container">
+
+        <div class="mySlides">
+            <div class="Context-Title">Burada Title Olacak</div>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/c/c9/Moon.jpg" style="width:100%">
+            <div class="text">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cumque quis laboriosam,
+                incidunt deserunt perspiciatis, accusantium provident adipisci explicabo repellendus laudantium
+                dolorum tempore!
+            </div>
+        </div>
+
+        <div class="mySlides">
+            <div class="Context-Title">2 / 3</div>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/c/c9/Moon.jpg" style="width:100%">
+            <div class="text">Context</div>
+        </div>
+
+        <div class="mySlides">
+            <div class="Context-Title">3 / 3</div>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/c/c9/Moon.jpg" style="width:100%">
+            <div class="text">Context 2</div>
+        </div>
+
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+    </div>
+    <br>
+
+    <div style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+    </div>
+</section>
+
+
+
+
+
+
 <div>
     <section class="banner-sec">
         <div class="container">
-            <div class="row">
-                <div class="col-md-12 top-slider">
-                    <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
-                        Indicators
-                        <ol class="carousel-indicators">
-                            <li data-target="#carousel-example-generic" data-slide-to="0" class=""></li>
-                            <li data-target="#carousel-example-generic" data-slide-to="1" class=""></li>
-                            <li data-target="#carousel-example-generic" data-slide-to="2" class="active"></li>
-                        </ol>
-                        Wrapper for slides
-                        <div class="carousel-inner" role="listbox">
-                            <div class="carousel-item">
-                                <div class="news-block">
-                                    <div class="news-media"><img class="img-fluid" src="#" alt=""></div>
-                                    <div class="news-title">
-                                        <h2 class=" title-large"><a href="#">Ray madison may struggle to get best from Paul in a 4-2-3-1 formation</a></h2>
-                                    </div>
-                                    <div class="news-des">Condimentum ultrices mi est a arcu at cum a elementum per cum turpis dui vulputate vestibulum in vehicula montes vel. Mauris nam suspendisse consectetur mus...</div>
-                                    <div class="time-text"><strong>2h ago</strong></div>
-                                    <div></div>
-                                </div>
-                            </div>
-                            <div class="carousel-item">
-                                <div class="news-block">
-                                    <div class="news-media"><img class="img-fluid" src="#" alt=""></div>
-                                    <div class="news-title">
-                                        <h2 class=" title-large"><a href="#">An Alternative Form of Mental Health Care Gains a Foothold</a></h2>
-                                    </div>
-                                    <div class="news-des">Condimentum ultrices mi est a arcu at cum a elementum per cum turpis dui vulputate vestibulum in vehicula montes vel. Mauris nam suspendisse consectetur mus...</div>
-                                    <div class="time-text"><strong>2h ago</strong></div>
-                                    <div></div>
-                                </div>
-                            </div>
-                            <div class="carousel-item active">
-                                <div class="news-block">
-                                    <div class="news-media"><img class="img-fluid" src="#" alt=""></div>
-                                    <div class="news-title">
-                                        <h2 class=" title-large"><a href="#">Key Republican Senator Says She Will Not Vote for former president!</a></h2>
-                                    </div>
-                                    <div class="news-des">Condimentum ultris mi est a arcu at cum a elementum per cum turpis dui vulputate vestibulum in vehicula montes vel. Mauris nam suspendisse consectetur mus...</div>
-                                    <div class="time-text"><strong>2 hour ago</strong></div>
-                                    <div></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-8">
-
-
-
-                    @*Buraya Foreach*@
+            <div style="padding: 2rem;" class="row">
+                <div class="col-8">
                     <div class="card">
                         <img class="img-fluid" src="#" alt="">
-                        <div class="card-img-overlay"> <span class="badge badge-pill badge-danger">Politics</span> </div>
+                        <div style="top:-15px !important;" class="card-img-overlay">
+                            <span class="badge badge-pill badge-danger">Ekonomi</span>
+                        </div>
                         <div class="card-body">
                             <div class="news-title">
-                                <h2 class=" title-small"><a href="#">title </a></h2>
+                                <h2 class=" title-small text-dark"><a href="#">Ekonomi Hakkında Title Olacak </a></h2>
+                            </div>
+                            <div class="news-block">
+                                <p>
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Id quaerat dolorum doloremque hic
+                                    minima exercitationem. Sed voluptatem, unde quibusdam veniam, nihil ducimus dolorem
+                                    voluptatibus quos, quidem architecto delectus itaque necessitatibus quisquam rem!
+                                </p>
                             </div>
                             <p class="card-text"><small class="text-time"><em>Datetim("dd MMM yyyy")</em></small></p>
                         </div>
                     </div>
-
+                </div>
+                <div class="col-4">
+                    <div class="card">
+                        <p>Burada birşeyler olacak</p>
+                    </div>
 
                 </div>
-                <div class="col-md-4">Hava Durumu</div>
-
-
-
-
             </div>
+
         </div>
     </section>
 
     @*@await Html.PartialAsync("Ekonomics")*@
 
 </div>
+
+
+<script>
+    var slideIndex = 1;
+    showSlides(slideIndex);
+
+    function plusSlides(n) {
+        showSlides(slideIndex += n);
+    }
+
+    function currentSlide(n) {
+        showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        var dots = document.getElementsByClassName("dot");
+        if (n > slides.length) {
+            slideIndex = 1
+        }
+        if (n < 1) {
+            slideIndex = slides.length
+        }
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex - 1].style.display = "block";
+        dots[slideIndex - 1].className += " active";
+    }
+</script>
+<style>
+        /* Slideshow container */
+    #slider {
+        margin:2rem 0;
+    }
+    .slideshow-container {
+        max-width: 1000px;
+        position: relative;
+        margin: auto;
+    }
+
+        /* Next & previous buttons */
+        .prev,
+        .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            width: auto;
+            padding: 16px;
+            margin-top: -22px;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+            transition: 0.6s ease;
+            border-radius: 0 3px 3px 0;
+            user-select: none;
+        }
+
+        /* Position the "next button" to the right */
+        .next {
+            right: 0;
+            border-radius: 3px 0 0 3px;
+        }
+
+        /* On hover, add a black background color with a little bit see-through */
+        .prev:hover,
+        .next:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+
+        /* Caption text */
+        .text {
+            color: #f2f2f2;
+            font-size: 15px;
+            padding: 8px 12px;
+            position: absolute;
+            bottom: 8px;
+            width: 100%;
+            text-align: center;
+        }
+
+        /* Number text (1/3 etc) */
+        .Context-Title {
+            color: #f2f2f2;
+            font-size: 12px;
+            padding: 8px 12px;
+            position: absolute;
+            top: 0;
+        }
+
+        /* The dots/bullets/indicators */
+        .dot {
+            cursor: pointer;
+            height: 15px;
+            width: 15px;
+            margin: 0 2px;
+            background-color: #bbb;
+            border-radius: 50%;
+            display: inline-block;
+            transition: background-color 0.6s ease;
+        }
+
+        
+
+        /*
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+
+
+
+*/
+
+        /* On smaller screens, decrease text size */
+        
+        }
+
+        .header-top-menu {
+            padding: 1rem;
+            margin: 0 3rem;
+        }
+
+        a {
+            color: black !important;
+            font-weight: 600;
+        }
+
+        * {
+            font-size: medium;
+            font-weight: 600;
+            box-sizing: border-box;
+        }
+
+        .card {
+            margin-top: 1rem;
+        }
+        
+        .news-block,
+        .text-time {
+            opacity: 0.8;
+        }
+
+        img {
+            max-width: 1400px;
+            max-height: 400px;
+        }
+        .carousel-inner img {
+            width: 100%;
+            /* Set width to 100% */
+            margin: auto;
+            min-height: 200px;
+        }
+        /* Hide the carousel text when the screen is less than 600 pixels wide */
+       
+        }
+    </style>
