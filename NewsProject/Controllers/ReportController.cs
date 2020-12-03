@@ -16,6 +16,14 @@ namespace NewsProject.Controllers
             unitOfWork.ReportRepository.GetUptoDateReport();
             return View(unitOfWork.ReportRepository);
         }
+        public IActionResult News(int id)
+        {
+            unitOfWork.ReportRepository.GetReportWithId(id);
+            unitOfWork.Complete();
+            ViewBag.IdNumber = id;
+            return View("News",unitOfWork.ReportRepository);
+         }
+
      
     }
 }
