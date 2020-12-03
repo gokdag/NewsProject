@@ -1,0 +1,41 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@model NewsProject.data.concrete.ReportRepository;
+
+
+@foreach (var data in Model.GetUptoDateReport())
+{
+<section>
+    <div class="container" style="padding: 2rem;">
+        <div class="row">
+            <div class=" col-md-8 content card" style="padding: 1rem; border: 1px solid gray; border: 1px solid rgba(0,0,0,0.2);">
+                <div class=" card-header" style="text-align: center; font-weight: 700; background-color: white !important;">
+                    <p>@data.Title</p>
+                </div>
+                <div class=" card-img">
+                    <img src="./image.jpg" style="width: 100%;" alt="deneme">
+                </div>
+                <div class=" card-body">
+                    <p>@data.Content</p>
+                </div>
+                <div class=" content-bottom" style="display: flex;display: flex;justify-content: space-between;margin: 0 1rem;">
+                    <div class=" card-text" style="opacity: 0.8;">
+                        @data.DateTime.ToString("dd MM yyyy")
+                    </div>
+                    <div class="card-text" style="opacity: 0.8;">                       
+                        <p> Okunma Satisi  <span> @data.ReadOfNumber</span></p>
+                    </div>
+
+                </div>
+
+
+            </div>
+            <div class="col-md-4">
+                <p>Lorem ipsum dolor sit amet.</p>
+            </div>
+        </div>
+
+    </div>
+</section>
+}

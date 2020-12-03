@@ -27,8 +27,14 @@ namespace NewsProject.data.concrete
 
         public IEnumerable<Report> GetTopReports(int count)
         {
-            return _context.Reports.Take(count);
+            return _context.Reports.Take(3);
         }
+        public IEnumerable<Report> GetUptoDateReport()
+        {
+            return _context.Reports.Where(x => x.DateTime >= DateTime.Today).ToList();
+        }
+
+        public DatabaseContext DataContext { get { return _context as DatabaseContext; } }
 
     }
 }
