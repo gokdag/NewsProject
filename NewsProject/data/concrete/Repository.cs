@@ -8,12 +8,12 @@ using System.Threading.Tasks;
 
 namespace NewsProject.data.concrete
 {
-     public class Repository<Tentity> : IRepository<Tentity> where Tentity : class
+    public class Repository<Tentity> : IRepository<Tentity> where Tentity : class
     {
         private readonly DatabaseContext _context;
         private DbSet<Tentity> _dbSet;
-        
-            public Repository(DatabaseContext context)
+
+        public Repository(DatabaseContext context)
         {
             _context = context;
             _dbSet = _context.Set<Tentity>();
@@ -23,13 +23,14 @@ namespace NewsProject.data.concrete
             //return _dbSet.ToList();
             return _dbSet.ToList();
         }
-       
+
         public Tentity GetById(int id)
         {
             return _dbSet.Find(id);
         }
-        
-      
+
+
+
 
     }
 }

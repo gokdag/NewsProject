@@ -15,5 +15,10 @@ namespace NewsProject.data.Models
 
         public DbSet<Report> Reports { get; set; }
         public DbSet<Category> Categories { get; set; }
+
+        internal object Where(Func<object, object> p)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

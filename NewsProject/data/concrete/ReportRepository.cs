@@ -33,6 +33,13 @@ namespace NewsProject.data.concrete
         {
             return _context.Reports.Where(x => x.DateTime >= DateTime.Today).ToList();
         }
+        public Report GetReportWithId(int id)
+        {
+            //return _context.Reports.Include(x=>x.Category).Where(x=>x.Id==id);
+            return _context.Reports.Include(x=>x.Category).Where(x=>x.Id==id).FirstOrDefault();
+
+        }
+       
 
         public DatabaseContext DataContext { get { return _context as DatabaseContext; } }
 
