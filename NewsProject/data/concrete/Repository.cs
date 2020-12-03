@@ -28,5 +28,8 @@ namespace NewsProject.data.concrete
         {
             return _dbSet.Find(id);
         }
+        
+      
+
     }
 }

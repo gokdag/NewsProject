@@ -11,6 +11,7 @@ namespace NewsProject.data.Abstract
        public IEnumerable<Report> GetTopReports(int count);
        public Report GetFirstReport(Category id);
         public IEnumerable<Report> GetAllWithCategory();
+        public IEnumerable<Report> GetUptoDateReport();
 
 
     }
