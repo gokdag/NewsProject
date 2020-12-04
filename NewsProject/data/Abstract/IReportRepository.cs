@@ -13,6 +13,7 @@ namespace NewsProject.data.Abstract
         public IEnumerable<Report> GetAllWithCategory();
         public IEnumerable<Report> GetUptoDateReport();
         public Report GetReportWithId(int id);
+        public Report IncreaseReadNumber(int id);
         
 
 

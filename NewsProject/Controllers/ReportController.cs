@@ -19,6 +19,7 @@ namespace NewsProject.Controllers
         public IActionResult News(int id)
         {
             unitOfWork.ReportRepository.GetReportWithId(id);
+            unitOfWork.ReportRepository.IncreaseReadNumber(id);            
             unitOfWork.Complete();
             ViewBag.IdNumber = id;
             return View("News",unitOfWork.ReportRepository);
