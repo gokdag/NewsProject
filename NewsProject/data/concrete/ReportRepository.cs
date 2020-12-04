@@ -39,6 +39,15 @@ namespace NewsProject.data.concrete
             return _context.Reports.Include(x=>x.Category).Where(x=>x.Id==id).FirstOrDefault();
 
         }
+        public Report IncreaseReadNumber(int id)
+        {
+            if (id != 0)
+            { 
+            _context.Reports.Where(x => x.Id == id).FirstOrDefault().ReadOfNumber += 1;
+            
+            }
+            return _context.Reports.Where(x => x.Id == id).FirstOrDefault();
+        }
        
 
         public DatabaseContext DataContext { get { return _context as DatabaseContext; } }
