@@ -7,13 +7,14 @@
     @Model.GetReportWithId(ViewBag.IdNumber).Category.CategoryName
     <div class="container" style="padding: 2rem;">
         <div class="row">
-            <div class=" col-md-8 content card" style="padding: 1rem; border: 1px solid gray; border: 1px solid rgba(0,0,0,0.2);">
+            <div class=" col-md-10 content card" style="padding: 1rem; border: 1px solid gray; border: 1px solid rgba(0,0,0,0.2);">
                 <div class=" card-header" style="text-align: center; font-weight: 700; background-color: white !important;">
                     <p>@Model.GetReportWithId(ViewBag.IdNumber).Title</p>
                 </div>
                 <div class=" card-img">
-                    <img src="./image.jpg" style="width: 100%;" alt="deneme">
+                    <img src="@Model.GetReportWithId(ViewBag.IdNumber).IMageUrl" style="width: 100%; ">
                 </div>
+                
                 <div class=" card-body">
                     <p>@Model.GetReportWithId(ViewBag.IdNumber).Content</p>
                 </div>
@@ -30,10 +31,11 @@
 
 
             </div>
-            <div class="col-md-4">
+            <div class="col-md-2">
                 <p>Lorem ipsum dolor sit amet.</p>
             </div>
         </div>
 
     </div>
 </section>
+
