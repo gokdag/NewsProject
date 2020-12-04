@@ -14,6 +14,7 @@ namespace NewsProject.data.Models
         public int ReadOfNumber { get; set; }
         public int CategoryId { get; set; }
         public bool IsActive { get; set; }
+        public string IMageUrl { get; set; }
         public DateTime DateTime { get; set; }
         public virtual Category Category { get; set; }
     }

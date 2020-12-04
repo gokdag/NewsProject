@@ -13,11 +13,11 @@
         <div class="row">
             <div class=" col-md-8 content card" style="padding: 1rem; border: 1px solid gray; border: 1px solid rgba(0,0,0,0.2);">
                 <div class=" card-header" style="text-align: center; font-weight: 700; background-color: white !important;">
-                    <p>@data.Title</p>
+                    <a style="float:left;color:black" href="/Report/News/@data.Id">@data.Title</a>
                 </div>
-                <div class=" card-img">
-                    <img src="./image.jpg" style="width: 100%;" alt="deneme">
-                </div>
+                @*<div class=" card-img">
+                    <img src="@data.ImageUrl" style="width: 100%;">
+                </div>*@
                 <div class=" card-body">
                     <p>@data.Content</p>
                 </div>
