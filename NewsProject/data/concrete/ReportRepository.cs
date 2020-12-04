@@ -48,7 +48,12 @@ namespace NewsProject.data.concrete
             }
             return _context.Reports.Where(x => x.Id == id).FirstOrDefault();
         }
-       
+        public IEnumerable<Report> ListWithCategoryId(int Id)
+        {
+            return _context.Reports.Where(x => x.CategoryId == Id).ToList();
+        }
+
+
 
         public DatabaseContext DataContext { get { return _context as DatabaseContext; } }
 

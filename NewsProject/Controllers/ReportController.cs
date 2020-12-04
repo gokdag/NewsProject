@@ -24,6 +24,13 @@ namespace NewsProject.Controllers
             ViewBag.IdNumber = id;
             return View("News",unitOfWork.ReportRepository);
          }
+        
+        public IActionResult List(int id)
+        {
+            ViewBag.CategoryId = id;
+            unitOfWork.ReportRepository.ListWithCategoryId(id);
+            return View("List",unitOfWork.ReportRepository);
+        }
 
      
     }

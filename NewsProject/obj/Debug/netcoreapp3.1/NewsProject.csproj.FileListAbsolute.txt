@@ -75,4 +75,4 @@ C:\Users\kerim\Documents\GitHub\NewsProject\NewsProject\bin\Debug\netcoreapp3.1\
 C:\Users\kerim\Documents\GitHub\NewsProject\NewsProject\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
 C:\Users\kerim\Documents\GitHub\NewsProject\NewsProject\obj\Debug\netcoreapp3.1\Razor\Views\Report\Index.cshtml.g.cs
 C:\Users\kerim\Documents\GitHub\NewsProject\NewsProject\obj\Debug\netcoreapp3.1\Razor\Views\Report\News.cshtml.g.cs
-C:\Users\kerim\Documents\GitHub\NewsProject\NewsProject\obj\Debug\netcoreapp3.1\NewsProject.csprojAssemblyReference.cache
+C:\Users\kerim\Documents\GitHub\NewsProject\NewsProject\obj\Debug\netcoreapp3.1\Razor\Views\Report\List.cshtml.g.cs
