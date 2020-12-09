@@ -25,9 +25,9 @@ namespace NewsProject.data.concrete
             return _context.Reports.Include(x=>x.Category).ToList();
         }
 
-        public IEnumerable<Report> GetTopReports(int count)
+        public IEnumerable<Report> GetTopReports()
         {
-            return _context.Reports.Take(3);
+            return _context.Reports.Take(8).ToArray();
         }
         public IEnumerable<Report> GetUptoDateReport()
         {

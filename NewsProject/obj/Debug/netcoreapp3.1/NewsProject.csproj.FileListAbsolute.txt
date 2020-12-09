@@ -76,3 +76,4 @@ C:\Users\kerim\Documents\GitHub\NewsProject\NewsProject\bin\Debug\netcoreapp3.1\
 C:\Users\kerim\Documents\GitHub\NewsProject\NewsProject\obj\Debug\netcoreapp3.1\Razor\Views\Report\Index.cshtml.g.cs
 C:\Users\kerim\Documents\GitHub\NewsProject\NewsProject\obj\Debug\netcoreapp3.1\Razor\Views\Report\News.cshtml.g.cs
 C:\Users\kerim\Documents\GitHub\NewsProject\NewsProject\obj\Debug\netcoreapp3.1\Razor\Views\Report\List.cshtml.g.cs
+C:\Users\kerim\Documents\GitHub\NewsProject\NewsProject\obj\Debug\netcoreapp3.1\NewsProject.csprojAssemblyReference.cache
