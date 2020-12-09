@@ -8,7 +8,7 @@ namespace NewsProject.data.Abstract
 {
     public interface IReportRepository :IRepository<Report>
     {
-        public IEnumerable<Report> GetTopReports(int count);
+        public IEnumerable<Report> GetTopReports();
         public Report GetFirstReport(Category id);
         public IEnumerable<Report> GetAllWithCategory();
         public IEnumerable<Report> GetUptoDateReport();

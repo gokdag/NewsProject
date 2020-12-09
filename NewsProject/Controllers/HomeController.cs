@@ -24,6 +24,8 @@ namespace NewsProject.Controllers
         {
             
             unitOfWork.ReportRepository.GetAll();
+
+            unitOfWork.ReportRepository.GetTopReports();
             
             unitOfWork.Complete();
             return View(unitOfWork.ReportRepository);

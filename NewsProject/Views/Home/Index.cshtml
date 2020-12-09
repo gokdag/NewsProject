@@ -9,25 +9,27 @@
     <div class="slideshow-container">
 
         <div class="mySlides">
-            <div class="Context-Title"></div>
+            <div class="Context-Title">@Model.GetTopReports().ElementAt(0).Title</div>
             <img src="https://upload.wikimedia.org/wikipedia/commons/c/c9/Moon.jpg" style="width:100%">
             <div class="text">
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cumque quis laboriosam,
-                incidunt deserunt perspiciatis, accusantium provident adipisci explicabo repellendus laudantium
-                dolorum tempore!
+                @Model.GetTopReports().ElementAt(0).Content
             </div>
         </div>
 
         <div class="mySlides">
-            <div class="Context-Title">2 / 3</div>
+            <div class="Context-Title">
+                @Model.GetTopReports().ElementAt(1).Title
+            </div>
             <img src="https://upload.wikimedia.org/wikipedia/commons/c/c9/Moon.jpg" style="width:100%">
-            <div class="text">Context</div>
+            <div class="text">@Model.GetTopReports().ElementAt(1).Content</div>
         </div>
 
         <div class="mySlides">
-            <div class="Context-Title">3 / 3</div>
+            <div class="Context-Title">
+                @Model.GetTopReports().ElementAt(2).Title
+            </div>
             <img src="https://upload.wikimedia.org/wikipedia/commons/c/c9/Moon.jpg" style="width:100%">
-            <div class="text">Context 2</div>
+            <div class="text">@Model.GetTopReports().ElementAt(2).Content</div>
         </div>
 
         <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
