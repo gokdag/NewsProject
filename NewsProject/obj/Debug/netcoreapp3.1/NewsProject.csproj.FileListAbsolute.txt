@@ -83,9 +83,7 @@ C:\Users\kerim\Documents\GitHub\NewsProject\NewsProject\bin\Debug\netcoreapp3.1\
 C:\Users\kerim\Documents\GitHub\NewsProject\NewsProject\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Identity.Core.dll
 C:\Users\kerim\Documents\GitHub\NewsProject\NewsProject\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Identity.Stores.dll
 C:\Users\kerim\Documents\GitHub\NewsProject\NewsProject\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\Home\Index.cshtml.g.cs
-C:\Users\kerim\Documents\GitHub\NewsProject\NewsProject\obj\Debug\netcoreapp3.1\Razor\Views\Home\Login.cshtml.g.cs
 C:\Users\kerim\Documents\GitHub\NewsProject\NewsProject\obj\Debug\netcoreapp3.1\Razor\Areas\User\Views\Home\Index.cshtml.g.cs
-C:\Users\kerim\Documents\GitHub\NewsProject\NewsProject\obj\Debug\netcoreapp3.1\Razor\Views\Home\Register.cshtml.g.cs
 C:\Users\kerim\Documents\GitHub\NewsProject\NewsProject\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Razor.Language.dll
 C:\Users\kerim\Documents\GitHub\NewsProject\NewsProject\bin\Debug\netcoreapp3.1\Microsoft.CodeAnalysis.dll
 C:\Users\kerim\Documents\GitHub\NewsProject\NewsProject\bin\Debug\netcoreapp3.1\Microsoft.CodeAnalysis.CSharp.dll
@@ -158,4 +156,8 @@ C:\Users\kerim\Documents\GitHub\NewsProject\NewsProject\bin\Debug\netcoreapp3.1\
 C:\Users\kerim\Documents\GitHub\NewsProject\NewsProject\bin\Debug\netcoreapp3.1\tr\Microsoft.CodeAnalysis.Workspaces.resources.dll
 C:\Users\kerim\Documents\GitHub\NewsProject\NewsProject\bin\Debug\netcoreapp3.1\zh-Hans\Microsoft.CodeAnalysis.Workspaces.resources.dll
 C:\Users\kerim\Documents\GitHub\NewsProject\NewsProject\bin\Debug\netcoreapp3.1\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\kerim\Documents\GitHub\NewsProject\NewsProject\obj\Debug\netcoreapp3.1\Razor\Areas\User\Views\Shared\_Layout.cshtml.g.cs
+C:\Users\kerim\Documents\GitHub\NewsProject\NewsProject\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\Shared\_Layout.cshtml.g.cs
 C:\Users\kerim\Documents\GitHub\NewsProject\NewsProject\obj\Debug\netcoreapp3.1\NewsProject.csprojAssemblyReference.cache
+C:\Users\kerim\Documents\GitHub\NewsProject\NewsProject\obj\Debug\netcoreapp3.1\Razor\Views\Account\Index.cshtml.g.cs
+C:\Users\kerim\Documents\GitHub\NewsProject\NewsProject\obj\Debug\netcoreapp3.1\Razor\Views\Account\Register.cshtml.g.cs

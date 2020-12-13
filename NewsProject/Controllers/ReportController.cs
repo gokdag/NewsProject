@@ -1,12 +1,13 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using NewsProject.data.Models;
+using NewsProject.Filter;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
 namespace NewsProject.Controllers
-{
+{  [ActionFilterSessionCheck]
     public class ReportController : Controller
     {
         UnitOfWork unitOfWork = new UnitOfWork(new DatabaseContext());

@@ -30,6 +30,7 @@ namespace NewsProject
             services.AddDbContext<DatabaseContext>();
 
             services.AddAuthentication();
+            services.AddSession();
 
 
             services.AddIdentity<AppUser, IdentityRole>(opt =>
@@ -40,11 +41,11 @@ namespace NewsProject
                 opt.Password.RequireUppercase = false;
                 opt.Password.RequireNonAlphanumeric = false;
 
-            }).AddEntityFrameworkStores<DatabaseContext>();
+            }).AddRoles<IdentityRole>().AddEntityFrameworkStores<DatabaseContext>().AddDefaultTokenProviders();
 
             services.ConfigureApplicationCookie(opt =>
             {
-                opt.LoginPath = new PathString("/Home/Login");
+                opt.LoginPath = new PathString("/Account/Index");
                 opt.Cookie.HttpOnly = true;
                 opt.Cookie.SameSite = SameSiteMode.Strict;
                 opt.ExpireTimeSpan = TimeSpan.FromMinutes(5);
@@ -71,6 +72,7 @@ namespace NewsProject
             }
             app.UseHttpsRedirection();
             app.UseStaticFiles();
+            app.UseSession();
             IdentityInitializer.CreateAdmin(userManager, roleManager);
             app.UseRouting();
 
