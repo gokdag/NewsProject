@@ -5,7 +5,7 @@
 
 
 
-<form asp-action="Login" method="post" class="p-6 w-60 mx-auto">
+<form asp-action="Index" method="post" class="p-6 w-60 mx-auto">
     <div class="form-group">
         <label>Kullanıcı Adı</label>
         <input type="text" name="UserName" value="" />
@@ -21,4 +21,8 @@
 
     <button type="submit">Giriş Yap</button>
 </form>
-<a href="/Home/Register">Register</a>
+<form asp-action="Register" method="get">
+    <div class="form-group">
+        <button type="submit">Kayıt Ol</button>
+    </div>
+</form>
