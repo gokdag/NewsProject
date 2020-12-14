@@ -33,9 +33,14 @@ namespace NewsProject.Controllers
         [HttpGet]
         public IActionResult Index()
         {
-            
+            var user =HttpContext.User.FindFirstValue(ClaimTypes.NameIdentifier);
 
-            return View();
+            if(user==null)
+            {
+                return View();
+            }
+            return RedirectToAction ("Index","Home",new { area="User"});
+
         }
         [HttpPost]
         public async Task<IActionResult> IndexAsync(UserLoginModel loginModel)
@@ -102,7 +107,12 @@ namespace NewsProject.Controllers
         [AllowAnonymous]
         public IActionResult Register()
         {
-            return View();
+            var user = HttpContext.User.FindFirstValue(ClaimTypes.NameIdentifier);
+            if (user==null)
+            {
+                return View();
+            }
+            return RedirectToAction("Index", "Home", new { area = "User" });
         }
 
         [HttpPost]
