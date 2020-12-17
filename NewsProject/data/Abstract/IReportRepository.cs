@@ -15,7 +15,9 @@ namespace NewsProject.data.Abstract
         public Report GetReportWithId(int id);
         public Report IncreaseReadNumber(int id);
         public IEnumerable<Report> ListWithCategoryId(int Id);
-        
+        public IEnumerable<Report> DeleteById(int Id);
+
+
 
 
     }

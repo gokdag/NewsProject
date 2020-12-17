@@ -80,14 +80,13 @@ namespace NewsProject.Controllers
             
             if (ModelState.IsValid)
                 {
-                 
-                
 
                 var result = await _signInManager.PasswordSignInAsync(loginModel.UserName,loginModel.Password,loginModel.RememberMe,false);
                 if (result.Succeeded)
                 {
-                   
-                    if ( loginModel.UserName=="kgokdag")
+                    var user= await _userManager.FindByNameAsync(loginModel.UserName);
+
+                    if (await _userManager.IsInRoleAsync(user, "Admin"))
                     {
                         return RedirectToAction("Index", "Home", new { area = "Admin" });
 
