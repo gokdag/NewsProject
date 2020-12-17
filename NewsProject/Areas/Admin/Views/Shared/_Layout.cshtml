@@ -1,7 +1,6 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
 <head>
-    @model NewsProject.data.Models.AppUser
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - new_project</title>
@@ -13,13 +12,12 @@
 
     <link rel="stylesheet" href="~/css/site.css" />
     <link rel="stylesheet" href="~/css/main.css" />
-   
+
 
 </head>
 <body>
     <header>
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <a style="padding: 1rem;" class="navbar-brand" href="/Home/Index">Haberler</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                     aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -28,23 +26,17 @@
             <div class="collapse navbar-collapse header-top-menu" id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item active">
-                        <a class="nav-link" href="/Report/Index">Güncel Haberler <span class="sr-only">(current)</span></a>
+                        <a class="nav-link" href="/Admin/Home/Listele">Tüm Haberleri Listele <span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/Report/List/1">Ekonomi</a>
+                        <a class="nav-link" href="#">Haber Ekle</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link " href="/Report/List/2">Teknoloji</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link " href="/Report/List/3">Sağlık</a>
-                    </li>
-                    <li class="nav-item">
-
-                        <a class="nav-link " href="/Report/List/4">Spor</a>
+                        
+                        <a class="nav-link " href="/Admin/Home/Index" >Roller</a>
                     </li>
                 </ul>
-                <form action="Account/Logout" class="form-inline my-2 my-lg-0">
+                <form  action="/Account/Logout" class="form-inline my-2 my-lg-0">
                     <a style="margin-right: 1.2rem; text-decoration: none; color: black; cursor: default;" href="#">Hoşgeldiniz</a>
                     <button class="btn btn-outline-dark my-2 my-sm-0" type="submit">Çıkış Yap</button>
                 </form>

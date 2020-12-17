@@ -79,11 +79,20 @@ namespace NewsProject
             app.UseAuthentication();
             app.UseAuthorization();
 
+            /*app.UseMvc(routes =>
+            {
+                routes
+                    .MapRoute(name: "default", template: "{controller=Home}/{action=Index}/{id?}")
+                    .MapRoute(name: "api", template: "api/{controller}/{action}/{id?}");
+            });*/
+
+
+
             app.UseEndpoints(endpoints =>
             {
-                endpoints.MapControllerRoute(
-                    name: "areas",
-                    pattern: "{area}/{controller=home}/{action=Index}/{id?}");
+            endpoints.MapControllerRoute(
+                name: "areas",
+                    pattern: "{area}/{controller=Home}/{action=Index}/{id?}");
 
                 endpoints.MapControllerRoute(
                     name: "default",

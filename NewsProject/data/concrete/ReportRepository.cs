@@ -53,7 +53,12 @@ namespace NewsProject.data.concrete
             return _context.Reports.Where(x => x.CategoryId == Id).ToList();
         }
 
-
+        public IEnumerable<Report> DeleteById(int Id)
+        {
+            var data = _context.Reports.Where(x=>x.Id==Id).FirstOrDefault();
+            _context.Reports.Remove(data);
+            return _context.Reports;
+        }
 
         public DatabaseContext DataContext { get { return _context as DatabaseContext; } }
 
