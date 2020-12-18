@@ -25,12 +25,12 @@
                 <tr>
                     <td>
                         <p>@data.Id</p></td>
-                    <td>@data.Title</td>
+                    <td style="min-width: 150px;">@data.Title</td>
                     <td>@data.Content</td>
                     <td>@data.Category.CategoryName</td>
-                    <td>@data.DateTime.ToString("dd MM yyyy")</td>
+                    <td style=" min-width: 106px;">@data.DateTime.ToString("dd MM yyyy")</td>
                     <td><a href="/Admin/Home/DeleteReport/@data.Id" class="btn btn-danger">SİL</a></td>
-                    <td><button class="btn btn-warning">Güncelle</button></td>
+                    <td><a href="/Admin/Home/Update/@data.Id">Güncelle</a></td>
                 </tr>
 
             }
