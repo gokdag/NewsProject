@@ -27,7 +27,7 @@ namespace NewsProject.data.concrete
 
         public IEnumerable<Report> GetTopReports()
         {
-            return _context.Reports.Take(8).ToArray();
+            return _context.Reports.Take(3).ToArray();
         }
         public IEnumerable<Report> GetUptoDateReport()
         {
@@ -58,6 +58,48 @@ namespace NewsProject.data.concrete
             var data = _context.Reports.Where(x=>x.Id==Id).FirstOrDefault();
             _context.Reports.Remove(data);
             return _context.Reports;
+        }
+
+        public IEnumerable<Report> UpdateReport(Report model)
+        {
+            var data = _context.Reports.Find(model.Id);
+
+            data.Title = model.Title;
+            data.LongTitle = model.LongTitle;
+            data.Content = model.Content;
+            data.ReadOfNumber = model.ReadOfNumber;
+            data.CategoryId = model.CategoryId;
+            data.IsActive = model.IsActive;
+            data.DateTime = DateTime.Now;
+            data.IMageUrl = model.IMageUrl;
+
+            _context.SaveChanges();
+
+
+
+            return _context.Reports;
+        }
+
+        public IEnumerable<Report> CreateReport(Report model)
+        {
+            var data = new Report();
+
+            data.Title = model.Title;
+            data.LongTitle = model.LongTitle;
+            data.Content = model.Content;
+            data.ReadOfNumber = 1;
+            data.IsActive = model.IsActive;
+            data.IMageUrl = model.IMageUrl;
+            data.CategoryId = model.CategoryId;
+            data.DateTime = DateTime.Now;
+
+            _context.Reports.Add(data);
+            return _context.Reports;
+        }
+
+        public IEnumerable<Category> getAllCategory()
+        {
+           return _context.Categories.ToList();
         }
 
         public DatabaseContext DataContext { get { return _context as DatabaseContext; } }

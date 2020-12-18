@@ -1,8 +1,11 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
+using NewsProject.data.concrete;
 using NewsProject.data.Models;
 using NewsProject.Filter;
+using NewsProject.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -34,8 +37,51 @@ namespace NewsProject.Areas.Admin.Controllers
             unitOfWork.Complete();
             return RedirectToAction("Listele", "Home", new { area = "Admin" });
         }
-    
-        
+
+        [HttpGet]
+        public IActionResult Update(int id)
+        {
+            var model = unitOfWork.ReportRepository.GetReportWithId(id);
+
+            ReportViewModel gModel = new ReportViewModel();
+            gModel.Id = model.Id;
+            gModel.Title = model.Title;
+            gModel.LongTitle = model.LongTitle;
+            gModel.Content = model.Content;
+            gModel.ReadOfNumber = model.ReadOfNumber;
+            gModel.CategoryId = model.CategoryId;
+            gModel.IsActive = model.IsActive;
+            gModel.DateTime = model.DateTime;
+            gModel.Category = model.Category;
+
+
+            return View("Update", gModel);
+
+        }
+
+        [HttpPost]
+        public IActionResult Update(Report model)
+        {
+            unitOfWork.ReportRepository.UpdateReport(model);
+            
+            unitOfWork.Complete();
+
+            return RedirectToAction("Listele", "Home");
+        }
+        [HttpGet]
+        public IActionResult CreateReport() {
+
+            return View();
+        }
+        [HttpPost]
+        public IActionResult CreateReport(Report model)
+        {
+            unitOfWork.ReportRepository.CreateReport(model);
+            unitOfWork.Complete();
+            return View("Listele",unitOfWork.ReportRepository);
+        }
+
+
         /*Roles*/
         public IActionResult Index()
         {
@@ -54,5 +100,7 @@ namespace NewsProject.Areas.Admin.Controllers
             await roleManager.CreateAsync(role);
             return RedirectToAction("Index");
         }
+        
+
     }
 }

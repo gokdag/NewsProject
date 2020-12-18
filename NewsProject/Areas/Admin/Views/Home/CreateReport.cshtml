@@ -1,0 +1,67 @@
+﻿@model NewsProject.data.Models.Report;
+
+@{
+    Layout = "_Layout";
+}
+
+<body>
+
+    @using (Html.BeginForm(FormMethod.Post))
+    {
+
+        <div>
+            <div class="col-md-8">
+                <form action="/Admin/Home/CreateReport" method="post">
+
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">Title</span>
+                        </div>
+                        <input type="text" name="Title" class="form-control" aria-label="Title" aria-describedby="basic-addon1"
+                               required>
+                    </div>
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">Long Title</span>
+                        </div>
+                        <input type="text" name="LongTitle" class="form-control" aria-label="LongTitle" aria-describedby="basic-addon1"
+                               required>
+                    </div>
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">Content</span>
+                        </div>
+                        <input type="text" name="Content" class="form-control" aria-label="Content" aria-describedby="basic-addon1"
+                               required>
+                    </div>
+
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">Category</span>
+                        </div>
+                        <input type="text" name="CategoryId" class="form-control" aria-label="Category" aria-describedby="basic-addon1">
+                    </div>
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <label class="input-group-text" for="IsActive">IsActive</label>
+                        </div>
+                        <input type="checkbox" name="IsActive" class="form-control" aria-label="IsActive"
+                               aria-describedby="basic-addon1">
+                    </div>
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">ImageUrl</span>
+                        </div>
+                        <input type="text" name="ImageUrl" class="form-control" aria-label="ImageUrl"
+                               aria-describedby="basic-addon1">
+                    </div>
+
+
+                    <button class="btn btn-primary">Güncelle</button>
+                </form>
+            </div>
+        </div>
+
+
+        }
+    </body>

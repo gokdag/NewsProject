@@ -1,0 +1,59 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@using NewsProject.data.Models
+@model NewsProject.ViewModels.ReportViewModel;
+
+<head>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        textarea {
+            resize: none;
+            height: 65px;
+        }
+
+        #Id:last-child {
+            readonly;
+        }
+    </style>
+</head>
+
+
+
+
+
+@using (Html.BeginForm(FormMethod.Post))
+{
+    <div class="row d-flex justify-content-center mt-5">
+        <div class="col-md-8">
+            <form action="/Admin/Home/Update" method="post">
+                <div id="Id">
+                    <b>Id</b>
+                    <input class="form-control" readonly type="text" name="Id" value="@Model.Id" />
+                </div>
+                <br />
+                <b>Title</b>
+                @Html.TextAreaFor(x => x.Title, new { @class = "form-control" })
+                <br />
+                <b>Long Title</b>
+                @Html.TextAreaFor(x => x.LongTitle, new { @class = "form-control" })
+                <br />
+                <b>Content</b>
+                @Html.TextAreaFor(x => x.Content, new { @class = "form-control" })
+                <br />
+                <b>Read of Number</b>
+                @Html.TextBoxFor(x => x.ReadOfNumber, new { @class = "form-control" })
+                <br />
+                <b>Category Name</b>
+                @Html.TextBoxFor(x => x.CategoryId, new { @class = "form-control" })
+                <br />
+                <b>Is Active</b>
+                @Html.CheckBoxFor(x => x.IsActive, new { @class = "form-control" })
+                <br />
+                <button class="btn btn-primary">Güncelle</button>
+            </form>
+        </div>
+    </div>
+
+
+}
