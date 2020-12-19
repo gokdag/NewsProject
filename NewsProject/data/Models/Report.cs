@@ -16,6 +16,7 @@ namespace NewsProject.data.Models
         public bool IsActive { get; set; }
         public string IMageUrl { get; set; }
         public DateTime DateTime { get; set; }
+        public string SourceUrl { get; set; }
         public virtual Category Category { get; set; }
     }
 }

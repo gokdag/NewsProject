@@ -2,40 +2,82 @@
     For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 *@
 @model NewsProject.data.concrete.ReportRepository;
-
-
+<div class="row">
+    <div class="col-md"></div>
+</div>
 @foreach (var data in Model.GetUptoDateReport())
 {
-<section>
-    <div class="container" style="padding: 2rem;">
-        <div class="row">
-            <div class=" col-md-8 content card" style="padding: 1rem; border: 1px solid gray; border: 1px solid rgba(0,0,0,0.2);">
-                <div class=" card-header" style="text-align: center; font-weight: 700; background-color: white !important;">
-                    <p>@data.Title</p>
-                </div>
-                <div class=" card-img">
-                    <img src="@data.IMageUrl" style="width: 100%;">
-                </div>
-                <div class=" card-body">
-                    <p>@data.Content</p>
-                </div>
-                <div class=" content-bottom" style="display: flex;display: flex;justify-content: space-between;margin: 0 1rem;">
-                    <div class=" card-text" style="opacity: 0.8;">
-                        @data.DateTime.ToString("dd MM yyyy")
+    <section>
+        <div class="container" style="padding: 2rem;">
+            <div class="row">
+                <div class=" col-md-8 content card" style="padding: 1rem; border: 1px solid gray; border: 1px solid rgba(0,0,0,0.2);">
+                    <div class=" card-header" style="text-align: center; font-weight: 700; background-color: white !important;">
+                        <a style="color:#000000;" href="/Report/News/@data.Id">@data.Title</a>
                     </div>
-                    <div class="card-text" style="opacity: 0.8;">                       
-                        <p> Okunma Satisi  <span> @data.ReadOfNumber</span></p>
+                    <div class=" card-img">
+                        <img src="@data.IMageUrl" style="width: 100%;">
+                    </div>
+                    <div class=" card-body">
+                        <p>@data.Content</p>
+                    </div>
+                    <div class=" content-bottom" style="display: flex;display: flex;justify-content: space-between;margin: 0 1rem;">
+                        <div class=" card-text" style="opacity: 0.8;">
+                            @data.DateTime.ToString("dd MM yyyy")
+                        </div>
+                        <div class="card-text" style="opacity: 0.8;">
+                            <p> Okunma Satisi  <span> @data.ReadOfNumber</span></p>
+                        </div>
+
                     </div>
 
-                </div>
 
+                </div>
 
             </div>
-            <div class="col-md-4">
-                <p>Lorem ipsum dolor sit amet.</p>
+
+        </div>
+    </section>
+}   
+<section style="position:absolute; top:110px;right:51px;border:1px solid gray;padding:1rem;width:250px">
+    <div>
+        <div>
+            <b>Çok Okunanlar</b>
+        </div>
+        <hr style=" width: 110px; border-top: 3px solid gray; margin-left: 0px;" />
+        <div>
+            <div>
+                <a style="color:#000000" href="/Report/News/@Model.getTopRead().ElementAt(0).Id"><b>@Model.getTopRead().ElementAt(0).Title</b></a>
+            </div>
+
+            <div>
+                <span style="display:block;text-overflow: ellipsis;width: 200px;overflow: hidden; white-space: nowrap;">
+                    @Model.getTopRead().ElementAt(0).Content
+                </span>
             </div>
         </div>
 
+
+        <div style="margin-top:9px">
+            <div>
+                <a style="color:#000000" href="/Report/News/@Model.getTopRead().ElementAt(1).Id"><b>@Model.getTopRead().ElementAt(1).Title</b></a>
+            </div>
+
+            <div>
+                <span style="display:block;text-overflow: ellipsis;width: 200px;overflow: hidden; white-space: nowrap;">
+                    @Model.getTopRead().ElementAt(1).Content
+                </span>
+            </div>
+        </div>
+        <div style="margin-top:9px">
+            <div>
+                <a style="color:#000000"href="/Report/News/@Model.getTopRead().ElementAt(2).Id"><b>@Model.getTopRead().ElementAt(2).Title</b></a>
+            </div>
+
+            <div>
+                <span style="display:block;text-overflow: ellipsis;width: 200px;overflow: hidden; white-space: nowrap;">
+                    @Model.getTopRead().ElementAt(2).Content
+                </span>
+            </div>
+        </div>
     </div>
 </section>
-}

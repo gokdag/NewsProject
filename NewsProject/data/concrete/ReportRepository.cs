@@ -27,11 +27,11 @@ namespace NewsProject.data.concrete
 
         public IEnumerable<Report> GetTopReports()
         {
-            return _context.Reports.Take(3).ToArray();
+            return _context.Reports.Take(6).ToArray();
         }
         public IEnumerable<Report> GetUptoDateReport()
         {
-            return _context.Reports.Where(x => x.DateTime >= DateTime.Today).ToList();
+            return _context.Reports.Where(x => x.DateTime >= DateTime.Today).OrderByDescending(x=>x.DateTime).ToList();
         }
         public Report GetReportWithId(int id)
         {
@@ -71,7 +71,9 @@ namespace NewsProject.data.concrete
             data.CategoryId = model.CategoryId;
             data.IsActive = model.IsActive;
             data.DateTime = DateTime.Now;
+            data.SourceUrl = model.SourceUrl;
             data.IMageUrl = model.IMageUrl;
+            
 
             _context.SaveChanges();
 
@@ -100,6 +102,12 @@ namespace NewsProject.data.concrete
         public IEnumerable<Category> getAllCategory()
         {
            return _context.Categories.ToList();
+        }
+
+        public IEnumerable<Report> getTopRead()
+        {
+            int maxRead = _context.Reports.Max(x=>x.ReadOfNumber);
+            return _context.Reports.OrderByDescending(x=>x.ReadOfNumber).Take(3).ToArray();
         }
 
         public DatabaseContext DataContext { get { return _context as DatabaseContext; } }

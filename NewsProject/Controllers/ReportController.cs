@@ -15,6 +15,7 @@ namespace NewsProject.Controllers
         public IActionResult Index()
         {
             unitOfWork.ReportRepository.GetUptoDateReport();
+            unitOfWork.ReportRepository.getTopRead();
             return View(unitOfWork.ReportRepository);
         }
         public IActionResult News(int id)

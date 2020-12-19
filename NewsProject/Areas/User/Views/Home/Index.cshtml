@@ -1,4 +1,108 @@
-﻿@{
+﻿@model NewsProject.data.concrete.ReportRepository;
+@{
     Layout = "_Layout";
 }
-deneme
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+   
+</head>
+<body>
+    <main role="main">
+
+
+        <!-- Wrap the rest of the page in another container to center all the content. -->
+
+        <div class="container marketing">
+
+            <!-- Three columns of text below the carousel -->
+            <div class="row">
+                <div class="col-lg-4 text-center">
+                    <img class="rounded-circle "
+                         src="@Model.GetTopReports().ElementAt(0).IMageUrl"
+                         alt="Resim Yüklenemedi" width="140" height="140">
+                    <h2 style="text-align:left;">@Model.GetTopReports().ElementAt(0).Title</h2>
+                    <p style="text-align:left;">
+                        &emsp; @Model.GetTopReports().ElementAt(0).Content
+                    </p>
+                    <p><a class="btn btn-secondary" href="#" role="button">Detayları Göster»</a></p>
+                </div><!-- /.col-lg-4 -->
+                <div class="col-lg-4 text-center">
+                    <img class="rounded-circle "
+                         src="@Model.GetTopReports().ElementAt(1).IMageUrl"
+                         alt="Resim Yüklenemedi" width="140" height="140">
+                    <h2 style="text-align:left;">@Model.GetTopReports().ElementAt(1).Title</h2>
+                    <p style="text-align:left;">
+                        &emsp; @Model.GetTopReports().ElementAt(1).Content
+                    </p>
+                    <p><a class="btn btn-secondary" href="#" role="button">Detayları Göster»</a></p>
+                </div><!-- /.col-lg-4 -->
+                <div class="col-lg-4 text-center">
+                    <img class="rounded-circle "
+                         src="@Model.GetTopReports().ElementAt(2).IMageUrl"
+                         alt="Resim Yüklenemedi" width="140" height="140">
+                    <h2 style="text-align:left;">@Model.GetTopReports().ElementAt(2).Title</h2>
+                    <p style="text-align:left;">
+                        &emsp;@Model.GetTopReports().ElementAt(2).Content
+                    </p>
+                    <p><a class="btn btn-secondary" href="#" role="button">Detayları Göster»</a></p>
+                </div><!-- /.col-lg-4 -->
+
+            </div><!-- /.row -->
+            <!-- START THE FEATURETTES -->
+
+            <hr class="featurette-divider">
+
+            <div class="row featurette">
+                <div class="col-md-7">
+                    <h2 class="featurette-heading">@Model.GetTopReports().ElementAt(3).Title</h2>
+                    <p class="lead">
+                        &emsp; @Model.GetTopReports().ElementAt(3).Content
+                    </p>
+                </div>
+                <div class="col-md-5">
+                    <img class="featurette-image img-fluid mx-auto"
+                         style="width: 500px;"
+                         src="@Model.GetTopReports().ElementAt(3).IMageUrl"
+                         data-holder-rendered="true">
+                </div>
+            </div>
+
+            <hr class="featurette-divider">
+
+            <div class="row featurette">
+                <div class="col-md-7 order-md-2">
+                    <h2>@Model.GetTopReports().ElementAt(4).Title</h2>
+                    <p class="lead">
+                        &emsp;@Model.GetTopReports().ElementAt(4).Content
+                    </p>
+                </div>
+                <div class="col-md-5 order-md-1">
+                    <img class="featurette-image img-fluid mx-auto" 
+                         src="@Model.GetTopReports().ElementAt(4).IMageUrl"
+                         data-holder-rendered="true" style="width: 500px;">
+                </div>
+            </div>
+
+            <hr class="featurette-divider">
+
+            <div class="row featurette">
+                <div class="col-md-7">
+                    <h2 class="featurette-heading">@Model.GetTopReports().ElementAt(5).Title</h2>
+                    <p class="lead">
+                        &emsp; @Model.GetTopReports().ElementAt(5).Content
+                    </p>
+                </div>
+                <div class="col-md-5">
+                    <img class="featurette-image img-fluid mx-auto" 
+                         src="@Model.GetTopReports().ElementAt(5).IMageUrl"
+                         data-holder-rendered="true" style="width: 500px;">
+                </div>
+            </div>
+
+            <hr class="featurette-divider">
+
+            <!-- /END THE FEATURETTES -->
+
+        </div><!-- /.container -->
+    </main>
+</body>
