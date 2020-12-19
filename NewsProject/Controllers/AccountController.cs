@@ -43,6 +43,7 @@ namespace NewsProject.Controllers
 
         }
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public async Task<IActionResult> IndexAsync(UserLoginModel loginModel)
         {
 
@@ -77,14 +78,14 @@ namespace NewsProject.Controllers
             //}
 
             //return View(new UserLoginModel());
-            
-            if (ModelState.IsValid)
-                {
 
-                var result = await _signInManager.PasswordSignInAsync(loginModel.UserName,loginModel.Password,loginModel.RememberMe,false);
+            if (ModelState.IsValid)
+            {
+
+                var result = await _signInManager.PasswordSignInAsync(loginModel.UserName, loginModel.Password, loginModel.RememberMe, false);
                 if (result.Succeeded)
                 {
-                    var user= await _userManager.FindByNameAsync(loginModel.UserName);
+                    var user = await _userManager.FindByNameAsync(loginModel.UserName);
 
                     if (await _userManager.IsInRoleAsync(user, "Admin"))
                     {
@@ -92,10 +93,16 @@ namespace NewsProject.Controllers
 
                     }
 
-                    return RedirectToAction("Index","Home",new { area="User"});
+                    return RedirectToAction("Index", "Home", new { area = "User" });
                 }
+                else {
+                    ModelState.AddModelError(string.Empty,"Giriş işlemi başarısız");
+                }
+              
 
-                }
+            }
+           
+
             return View();
 
 
@@ -123,21 +130,22 @@ namespace NewsProject.Controllers
 
             if (ModelState.IsValid)
             {
-                var user = new AppUser { UserName=model.userName};
+                var user = new AppUser { UserName = model.userName };
 
-                IdentityResult chkUser = await _userManager.CreateAsync(user,model.Password);
+                IdentityResult chkUser = await _userManager.CreateAsync(user, model.Password);
 
 
-                    if (chkUser.Succeeded)
-                    {
-                    var result1 = await _userManager.AddToRoleAsync(user,"User");
-                        return RedirectToAction("Index", "Account");
-                    }
-
+                if (chkUser.Succeeded)
+                {
+                    var result1 = await _userManager.AddToRoleAsync(user, "User");
+                    return RedirectToAction("Index", "Account");
+                }
+               
 
 
 
             }
+            
             return View(model);
 
         }

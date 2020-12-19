@@ -8,13 +8,13 @@
     <div class="container" style="padding: 2rem;">
         <div class="row">
             <div class=" col-md-10 content card" style="padding: 1rem; border: 1px solid gray; border: 1px solid rgba(0,0,0,0.2);">
-                <div class=" card-header" style="text-align: center; font-weight: 700; background-color: white !important;">
+                <div style="text-align: center; font-weight: 700; background-color: white !important;">
                     <p>@Model.GetReportWithId(ViewBag.IdNumber).Title</p>
                 </div>
                 <div class=" card-img">
-                    <img src="@Model.GetReportWithId(ViewBag.IdNumber).IMageUrl" style="width: 100%; ">
+                    <img src="@Model.GetReportWithId(ViewBag.IdNumber).IMageUrl" style="width: 80%;display:flex;margin:0 auto;">
                 </div>
-                
+
                 <div class=" card-body">
                     <p>@Model.GetReportWithId(ViewBag.IdNumber).Content</p>
                 </div>
@@ -35,6 +35,7 @@
 
             </div>
         </div>
+        <a href="@Model.GetReportWithId(ViewBag.IdNumber).SourceUrl">Kaynak</a>
 
     </div>
 </section>
