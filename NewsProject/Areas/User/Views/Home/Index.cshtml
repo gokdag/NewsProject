@@ -17,34 +17,34 @@
             <!-- Three columns of text below the carousel -->
             <div class="row">
                 <div class="col-lg-4 text-center">
-                    <img class="rounded-circle "
+                    <img style=" border-radius: 30% !important;"
                          src="@Model.GetTopReports().ElementAt(0).IMageUrl"
-                         alt="Resim Yüklenemedi" width="140" height="140">
+                         width="140" height="140">
                     <h2 style="text-align:left;">@Model.GetTopReports().ElementAt(0).Title</h2>
                     <p style="text-align:left;">
                         &emsp; @Model.GetTopReports().ElementAt(0).Content
                     </p>
-                    <p><a class="btn btn-secondary" href="#" role="button">Detayları Göster»</a></p>
+                    <p><a class="btn btn-secondary" href="/Report/News/@Model.GetTopReports().ElementAt(0).Id" role="button">Detayları Göster»</a></p>
                 </div><!-- /.col-lg-4 -->
                 <div class="col-lg-4 text-center">
-                    <img class="rounded-circle "
+                    <img style=" border-radius: 30% !important;"
                          src="@Model.GetTopReports().ElementAt(1).IMageUrl"
-                         alt="Resim Yüklenemedi" width="140" height="140">
+                         width="140" height="140">
                     <h2 style="text-align:left;">@Model.GetTopReports().ElementAt(1).Title</h2>
                     <p style="text-align:left;">
                         &emsp; @Model.GetTopReports().ElementAt(1).Content
                     </p>
-                    <p><a class="btn btn-secondary" href="#" role="button">Detayları Göster»</a></p>
+                    <p><a class="btn btn-secondary" href="/Report/News/@Model.GetTopReports().ElementAt(1).Id" role="button">Detayları Göster»</a></p>
                 </div><!-- /.col-lg-4 -->
                 <div class="col-lg-4 text-center">
-                    <img class="rounded-circle "
+                    <img style=" border-radius: 30% !important;"
                          src="@Model.GetTopReports().ElementAt(2).IMageUrl"
-                         alt="Resim Yüklenemedi" width="140" height="140">
+                         width="140" height="140">
                     <h2 style="text-align:left;">@Model.GetTopReports().ElementAt(2).Title</h2>
                     <p style="text-align:left;">
                         &emsp;@Model.GetTopReports().ElementAt(2).Content
                     </p>
-                    <p><a class="btn btn-secondary" href="#" role="button">Detayları Göster»</a></p>
+                    <p><a class="btn btn-secondary" href="/Report/News/@Model.GetTopReports().ElementAt(2).Id" role="button">Detayları Göster»</a></p>
                 </div><!-- /.col-lg-4 -->
 
             </div><!-- /.row -->

@@ -22,16 +22,18 @@
 
             @foreach (var data in Model.GetAllWithCategory())
             {
-                <tr>
-                    <td>
-                        <p>@data.Id</p></td>
-                    <td style="min-width: 150px;">@data.Title</td>
-                    <td>@data.Content</td>
-                    <td>@data.Category.CategoryName</td>
-                    <td style=" min-width: 106px;">@data.DateTime.ToString("dd MM yyyy")</td>
-                    <td><a href="/Admin/Home/DeleteReport/@data.Id" class="btn btn-danger">SİL</a></td>
-                    <td><a href="/Admin/Home/Update/@data.Id">Güncelle</a></td>
-                </tr>
+        <tr>
+            <td>
+                <p>@data.Id</p>
+            </td>
+            <td style="min-width: 150px;">@data.Title</td>
+            <td>@data.Content</td>
+            <td>@data.Category.CategoryName</td>
+            <td style=" min-width: 106px;">@data.DateTime.ToString("dd MM yyyy")</td>
+            @*<td><a href="/Admin/Home/DeleteReport/@data.Id" class="btn btn-danger">SİL</a></td>*@
+            <td>@Html.ActionLink("Sil", "DeleteReport", new { id = data.Id }, new { @class = "btn btn-danger", onclick = "return confirm('Silme işlemini onaylıyor musun?')" })</td>
+            <td><a href="/Admin/Home/Update/@data.Id">Güncelle</a></td>
+        </tr>
 
             }
         </table>

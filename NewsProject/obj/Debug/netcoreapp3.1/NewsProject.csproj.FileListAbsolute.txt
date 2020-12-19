@@ -163,5 +163,5 @@ C:\Users\kerim\Documents\GitHub\NewsProject\NewsProject\obj\Debug\netcoreapp3.1\
 C:\Users\kerim\Documents\GitHub\NewsProject\NewsProject\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\Home\Create.cshtml.g.cs
 C:\Users\kerim\Documents\GitHub\NewsProject\NewsProject\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\Home\Update.cshtml.g.cs
 C:\Users\kerim\Documents\GitHub\NewsProject\NewsProject\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\Home\CreateReport.cshtml.g.cs
-C:\Users\kerim\Documents\GitHub\NewsProject\NewsProject\obj\Debug\netcoreapp3.1\NewsProject.csprojAssemblyReference.cache
 C:\Users\kerim\Documents\GitHub\NewsProject\NewsProject\obj\Debug\netcoreapp3.1\Razor\Areas\User\Views\Home\Index.cshtml.g.cs
+C:\Users\kerim\Documents\GitHub\NewsProject\NewsProject\obj\Debug\netcoreapp3.1\NewsProject.csprojAssemblyReference.cache

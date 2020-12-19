@@ -45,7 +45,9 @@
                                     </div>
                                 </div>
                             </form>
-
+                            @Html.ValidationMessageFor(x=>x.UserName)
+                            @Html.ValidationMessageFor(x=>x.Password)
+                            @Html.ValidationSummary(true)
                         </div>
                     </div>
                 </div>

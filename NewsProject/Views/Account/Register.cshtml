@@ -42,6 +42,10 @@
                                         </div>
                                     </div>
                                 </form>
+                                <div class="text-center">
+                                    @Html.ValidationMessageFor(x => x.userName)
+                                    @Html.ValidationMessageFor(x=>x.Password)
+                                </div>
                             </div>
                         </div>
                     </div>
