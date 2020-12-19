@@ -19,6 +19,7 @@ namespace NewsProject.data.Abstract
         public IEnumerable<Report> UpdateReport(Report model);
         public IEnumerable<Report> CreateReport(Report model);
         public IEnumerable<Category> getAllCategory();
+        public IEnumerable<Report> getTopRead();
 
 
 

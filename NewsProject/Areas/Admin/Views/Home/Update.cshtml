@@ -47,10 +47,18 @@
                 <b>Category Name</b>
                 @Html.TextBoxFor(x => x.CategoryId, new { @class = "form-control" })
                 <br />
+                <b>Source Url</b>
+                @Html.TextBoxFor(x => x.SourceUrl, new { @class = "form-control" })
+                <br />
                 <b>Is Active</b>
                 @Html.CheckBoxFor(x => x.IsActive, new { @class = "form-control" })
                 <br />
-                <button class="btn btn-primary">Güncelle</button>
+                <div class="d-flex justify-content-between" >
+                    <button class="btn btn-primary">Güncelle</button>
+                    <a href="/Admin/Home/Listele">İptal</a>
+
+                </div>
+
             </form>
         </div>
     </div>

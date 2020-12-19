@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using NewsProject.data.Models;
 using NewsProject.Models;
@@ -12,14 +13,16 @@ namespace NewsProject.Controllers
     {
         private readonly ILogger<HomeController> _logger;
         UnitOfWork unitOfWork = new UnitOfWork(new DatabaseContext());
+        private readonly UserManager<AppUser> _userManager;
 
-        public HomeController(ILogger<HomeController> logger)
+        public HomeController(ILogger<HomeController> logger,UserManager<AppUser> userManager)
         {
             _logger = logger;
+            _userManager = userManager;
          
         }
 
-        public IActionResult Index()
+        public  IActionResult IndexAsync()
         {
             var userId = HttpContext.User.FindFirstValue(ClaimTypes.NameIdentifier);
             if (User != null)
@@ -27,6 +30,7 @@ namespace NewsProject.Controllers
                 return RedirectToAction("Index", "Home", new { area = "User" });
 
             }
+
 
             unitOfWork.ReportRepository.GetAll();
 

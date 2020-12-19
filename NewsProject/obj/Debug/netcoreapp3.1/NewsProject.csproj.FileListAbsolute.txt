@@ -83,7 +83,6 @@ C:\Users\kerim\Documents\GitHub\NewsProject\NewsProject\bin\Debug\netcoreapp3.1\
 C:\Users\kerim\Documents\GitHub\NewsProject\NewsProject\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Identity.Core.dll
 C:\Users\kerim\Documents\GitHub\NewsProject\NewsProject\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Identity.Stores.dll
 C:\Users\kerim\Documents\GitHub\NewsProject\NewsProject\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\Home\Index.cshtml.g.cs
-C:\Users\kerim\Documents\GitHub\NewsProject\NewsProject\obj\Debug\netcoreapp3.1\Razor\Areas\User\Views\Home\Index.cshtml.g.cs
 C:\Users\kerim\Documents\GitHub\NewsProject\NewsProject\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Razor.Language.dll
 C:\Users\kerim\Documents\GitHub\NewsProject\NewsProject\bin\Debug\netcoreapp3.1\Microsoft.CodeAnalysis.dll
 C:\Users\kerim\Documents\GitHub\NewsProject\NewsProject\bin\Debug\netcoreapp3.1\Microsoft.CodeAnalysis.CSharp.dll
@@ -165,3 +164,4 @@ C:\Users\kerim\Documents\GitHub\NewsProject\NewsProject\obj\Debug\netcoreapp3.1\
 C:\Users\kerim\Documents\GitHub\NewsProject\NewsProject\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\Home\Update.cshtml.g.cs
 C:\Users\kerim\Documents\GitHub\NewsProject\NewsProject\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\Home\CreateReport.cshtml.g.cs
 C:\Users\kerim\Documents\GitHub\NewsProject\NewsProject\obj\Debug\netcoreapp3.1\NewsProject.csprojAssemblyReference.cache
+C:\Users\kerim\Documents\GitHub\NewsProject\NewsProject\obj\Debug\netcoreapp3.1\Razor\Areas\User\Views\Home\Index.cshtml.g.cs

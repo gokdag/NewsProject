@@ -14,7 +14,7 @@ using System.Threading.Tasks;
 namespace NewsProject.Areas.Admin.Controllers
 {
     [Area("Admin")]
-    [Authorize]
+    [Authorize(Roles ="Admin")]
     [ActionFilterSessionCheck]
     public class HomeController : Controller
     {
@@ -52,6 +52,7 @@ namespace NewsProject.Areas.Admin.Controllers
             gModel.CategoryId = model.CategoryId;
             gModel.IsActive = model.IsActive;
             gModel.DateTime = model.DateTime;
+            gModel.SourceUrl = model.SourceUrl;
             gModel.Category = model.Category;
 
 
